@@ -51,6 +51,7 @@
             <Button HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
                     Width="50"
+                    Click="Button_Click"
                     Background="Transparent"
                     BorderThickness="0"
                     Height="80">

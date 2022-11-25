@@ -43,17 +43,18 @@
                FontWeight="Medium"
                Foreground="Goldenrod"/>
         <ToggleButton Name="addstore"
-                VerticalAlignment="Center"
-                BorderThickness="0"
-                Background="Transparent"
-                Width="50"
-                Height="50"
-                Cursor="Hand"
-                HorizontalAlignment="Center">
+                      VerticalAlignment="Center"
+                      BorderThickness="0"
+                      Click="addstore_Click"
+                      Background="Transparent"
+                      Width="50"
+                      Height="50"
+                      Cursor="Hand"
+                      HorizontalAlignment="Center">
             <Ellipse Width="50" 
                      Height="50">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="/Images/add.png" Stretch="UniformToFill"/>
+                    <ImageBrush x:Name="image_button" ImageSource="/Images/add.png" Stretch="UniformToFill"/>
                 </Ellipse.Fill>
             </Ellipse>
         </ToggleButton>
