@@ -1,9 +1,7 @@
 ﻿using AppStore.Models;
 using System;
 using System.Collections.Generic;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace AppStore;
@@ -14,9 +12,13 @@ public partial class UserControl_Product : UserControl
 
     public Product Product { get; set; }
 
+    decimal? count { get; set; }
+
     public UserControl_Product(Product product, List<Product> products)
     {
         InitializeComponent();
+
+
 
         Products = new();
 
@@ -26,6 +28,7 @@ public partial class UserControl_Product : UserControl
         image.ImageSource = new BitmapImage(new Uri(product.Product_Image_Url!, UriKind.Relative));
 
 
+        count = product.Product_Count;
         Product = product;
         Products = products;
     }
@@ -36,14 +39,21 @@ public partial class UserControl_Product : UserControl
         var SimpleUrl = @"../../../Images/add.png";
 
 
-        if (addstore.IsChecked.Value == true)
-            image_button.ImageSource = new BitmapImage(new Uri(ChangedImageurl!, UriKind.Relative));
 
+        if (addstore.IsChecked.Value == true)
+        {
+            Product_count.Content = (count - 1);
+            image_button.ImageSource = new BitmapImage(new Uri(ChangedImageurl!, UriKind.Relative));
+            Products.Add(Product);
+        }
 
         else
+        {
+            Product_count.Content = count;
             image_button.ImageSource = new BitmapImage(new Uri(SimpleUrl!, UriKind.Relative));
+            Products.Remove(Product);
+        }
 
 
-        Products.Add(Product);
     }
 }

@@ -25,16 +25,18 @@ public partial class MainWindow : Window
         {
             UserControl_Product userControl = new UserControl_Product(product, Store_Products);
 
-            
+
             uniformGrid.Children.Add(userControl);
         }
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        MessageBox.Show($"{Store_Products.Count}");
+        foreach (var item in Store_Products)
+        {
+            MessageBox.Show($"{item.Product_Name}");
+        }
     }
-
 
 
 }
