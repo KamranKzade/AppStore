@@ -9,14 +9,14 @@ namespace AppStore;
 
 public partial class MainWindow : Window
 {
-    public List<Product> Products { get; set; }
-    public List<Product> Store_Products { get; set; }
+    public List<ProductItems> Products { get; set; }
+    public List<ProductItems> Store_Products { get; set; }
 
     public MainWindow()
     {
         InitializeComponent();
 
-        Products = new List<Product>();
+        Products = new();
         Store_Products = new();
 
         Products = Repository.FakeData.GetProducts();
@@ -30,13 +30,27 @@ public partial class MainWindow : Window
         }
     }
 
+
     private void Button_Click(object sender, RoutedEventArgs e)
     {
+
         foreach (var item in Store_Products)
         {
-            MessageBox.Show($"{item.Product_Name}");
+            MessageBox.Show($"{item.Product.Product_Name}");
         }
+
+
+        //if (Store_Products.Count > 0)
+        //{
+        //    AppStore_Button_Click app = new AppStore_Button_Click(Store_Products);
+        //    app.ShowDialog();
+        //}
+        //else
+        //    MessageBox.Show("Səbətdə məhsul yoxdur!!!", "Information", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+
     }
+
 
 
 }

@@ -1,20 +1,22 @@
 ﻿using AppStore.Models;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace AppStore;
 
 public partial class UserControl_Product : UserControl
 {
-    public List<Product> Products { get; set; }
+    public List<ProductItems> Products { get; set; }
 
-    public Product Product { get; set; }
+    public ProductItems Product { get; set; }
 
     decimal? count { get; set; }
 
-    public UserControl_Product(Product product, List<Product> products)
+    public UserControl_Product(ProductItems product, List<ProductItems> store)
     {
         InitializeComponent();
 
@@ -22,15 +24,16 @@ public partial class UserControl_Product : UserControl
 
         Products = new();
 
-        ProductName.Content = product.Product_Name;
+        ProductName.Content = product.Product.Product_Name;
         Product_count.Content = product.Product_Count.ToString();
         Product_price.Content = product.Product_Price.ToString();
-        image.ImageSource = new BitmapImage(new Uri(product.Product_Image_Url!, UriKind.Relative));
+        image.ImageSource = new BitmapImage(new Uri(product.Product.Product_Image_Url!, UriKind.Relative));
 
 
         count = product.Product_Count;
+
         Product = product;
-        Products = products;
+        Products = store;
     }
 
     private void addstore_Click(object sender, System.Windows.RoutedEventArgs e)

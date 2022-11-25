@@ -7,65 +7,62 @@ namespace AppStore.Repository;
 
 public class FakeData
 {
-    public static List<Product> GetProducts()
+    public static List<ProductItems> GetProducts()
     {
-        return new List<Product>()
+        return new List<ProductItems>()
         {
-            new Product()
+            new ProductItems
             {
-                Product_Image_Url = "../../../Images/cola.png",
-                Product_Name="Cola",
+                Product = new Product ("../../../Images/cola.png", "Cola"),
                 Product_Price = 0.9M,
-                Product_Count = 40
+                Product_Count = 40,
+
             },
-            new Product()
+            new ProductItems
             {
-                 Product_Image_Url = "../../../Images/fanta.png",
-                Product_Name="Fanta",
+                Product = new Product("../../../Images/fanta.png", "Fanta"),
+                Product_Count = 52,
                 Product_Price = 0.9M,
-                Product_Count = 52
             },
-            new Product()
+            new ProductItems
             {
-                 Product_Image_Url = "../../../Images/pepsi.png",
-                Product_Name="Pepsi",
+                Product = new Product( "../../../Images/pepsi.png","Pepsi" ),
                 Product_Price = 0.9M,
                 Product_Count = 32
             },
-            new Product()
+            new ProductItems
             {
-                Product_Image_Url = "../../../Images/snickers.png",
-                Product_Name="Snickers",
+                Product =new Product("../../../Images/snickers.png", "Snickers"),
                 Product_Price = 1.2M,
                 Product_Count = 28
             },
-            new Product()
-            {   Product_Image_Url = "../../../Images/mars.png",
-                Product_Name="Mars",
+            new ProductItems
+            {
+                Product = new Product("../../../Images/mars.png", "Mars"),
                 Product_Price = 1M,
                 Product_Count = 18
             },
-            new Product()
-            {   Product_Image_Url = "../../../Images/bounty.png",
-                Product_Name="Bounty",
+            new ProductItems
+            {
+                Product = new Product("../../../Images/bounty.png", "Bounty"),
                 Product_Price = 1M,
                 Product_Count = 18
             },
-            new Product()
-            {   Product_Image_Url = "../../../Images/redbull.png",
-                Product_Name="Redbull",
+            new ProductItems
+            {
+                Product = new Product("../../../Images/redbull.png", "Redbull"),
                 Product_Price = 3.2M,
                 Product_Count = 25
             },
-            new Product()
-            {   Product_Image_Url = "../../../Images/bizon.png",
-                Product_Name="Bizon",
+            new ProductItems
+            {
+                Product = new Product( "../../../Images/bizon.png","Bizon" ),
                 Product_Price = 1.2M,
                 Product_Count = 30
             },
-            new Product()
-            {   Product_Image_Url = "../../../Images/hell.png",
-                Product_Name="Hell",
+            new ProductItems
+            {
+                Product = new Product("../../../Images/hell.png", "Hell"),
                 Product_Price = 2M,
                 Product_Count = 19
             },
