@@ -1,27 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AppStore.Models;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
-namespace AppStore
+namespace AppStore;
+
+public partial class Edit_Window : Window
 {
-    /// <summary>
-    /// Interaction logic for Edit_Window.xaml
-    /// </summary>
-    public partial class Edit_Window : Window
+    public ProductItems product { get; set; }
+
+
+    public Edit_Window(ProductItems gelen)
     {
-        public Edit_Window()
+        InitializeComponent();
+        product = new ProductItems();
+        product = gelen;
+    }
+
+
+
+    private void addstore_Click(object sender, RoutedEventArgs e)
+    {
+        try
         {
-            InitializeComponent();
+            product.Product_Price = decimal.Parse(Product_price.Text);
+            product.Product_Count = decimal.Parse(Product_count.Text);
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"{ex}", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
+
+        DialogResult = true;
     }
 }

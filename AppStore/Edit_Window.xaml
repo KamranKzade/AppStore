@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:AppStore"
         mc:Ignorable="d"
         Icon="/Images/edit.png"
-        Title="Edit_Window" Height="450" Width="800">
+        Title="Edit_Window" 
+        Height="350" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Width="300">
     <StackPanel Margin="10">
 
         <StackPanel.Background>
@@ -20,7 +24,7 @@
         <Ellipse Width="100"
                  Height="75">
             <Ellipse.Fill>
-                <ImageBrush x:Name="image" Stretch="Fill"/>
+                <ImageBrush x:Name="Product_image" Stretch="Fill"/>
             </Ellipse.Fill>
         </Ellipse >
 
@@ -71,6 +75,7 @@
         <Button Name="addstore"
                 VerticalAlignment="Center"
                 BorderThickness="0"
+                Click="addstore_Click"
                 ToolTip="Edit Button"
                 Background="Transparent"
                 Width="50"

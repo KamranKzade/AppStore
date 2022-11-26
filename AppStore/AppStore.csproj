@@ -10,12 +10,15 @@
   <ItemGroup>
     <None Remove="add.png" />
     <None Remove="buy.png" />
+    <None Remove="edit.png" />
     <None Remove="hamper.png" />
+    <None Remove="Images\edit.png" />
     <None Remove="store.png" />
     <None Remove="store2.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\edit.png" />
     <Resource Include="Images\buy.png" />
     <Resource Include="Images\add.png" />
     <Resource Include="Images\hamper.png" />
