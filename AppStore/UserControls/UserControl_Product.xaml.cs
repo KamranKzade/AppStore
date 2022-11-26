@@ -46,6 +46,7 @@ public partial class UserControl_Product : UserControl
         if (addstore.IsChecked.Value == true)
         {
             Product_count.Content = (count - 1);
+            Product.Product_Count = count - 1;
             image_button.ImageSource = new BitmapImage(new Uri(ChangedImageurl!, UriKind.Relative));
             Products.Add(Product);
         }

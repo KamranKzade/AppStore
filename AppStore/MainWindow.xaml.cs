@@ -34,19 +34,19 @@ public partial class MainWindow : Window
     private void Button_Click(object sender, RoutedEventArgs e)
     {
 
-        foreach (var item in Store_Products)
+       //foreach (var item in Store_Products)
+       //{
+       //    MessageBox.Show($"{item.Product_Count}");
+       //}
+
+
+        if (Store_Products.Count > 0)
         {
-            MessageBox.Show($"{item.Product.Product_Name}");
+            AppStore_Window app = new AppStore_Window(Store_Products);
+            app.ShowDialog();
         }
-
-
-        //if (Store_Products.Count > 0)
-        //{
-        //    AppStore_Button_Click app = new AppStore_Button_Click(Store_Products);
-        //    app.ShowDialog();
-        //}
-        //else
-        //    MessageBox.Show("Səbətdə məhsul yoxdur!!!", "Information", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        else
+            MessageBox.Show("Səbətdə məhsul yoxdur!!!", "Information", MessageBoxButton.OK, MessageBoxImage.Exclamation);
 
 
     }
