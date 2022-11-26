@@ -9,9 +9,8 @@
     <StackPanel Margin="10" Orientation="Vertical" >
         <StackPanel.Background>
             <LinearGradientBrush>
-                <GradientStop Color="#0052D4" Offset="0"/>
-                <GradientStop  Color="#4364F7" Offset="0.5"/>
-                <GradientStop  Color="#6FB1FC" Offset="1"/>
+                <GradientStop Color="#304352" Offset="0"/>
+                <GradientStop  Color="#d7d2cc" Offset="1"/>
             </LinearGradientBrush>
         </StackPanel.Background>
 

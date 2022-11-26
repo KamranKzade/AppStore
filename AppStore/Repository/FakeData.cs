@@ -32,21 +32,33 @@ public class FakeData
             },
             new ProductItems
             {
+                Product = new Product( "../../../Images/sprite.png","Sprite" ),
+                Product_Price = 0.9M,
+                Product_Count = 48
+            },
+            new ProductItems
+            {
                 Product =new Product("../../../Images/snickers.png", "Snickers"),
                 Product_Price = 1.2M,
                 Product_Count = 28
             },
             new ProductItems
             {
-                Product = new Product("../../../Images/mars.png", "Mars"),
-                Product_Price = 1M,
-                Product_Count = 18
+                Product = new Product("../../../Images/alpengold.png", "Alpen Gold"),
+                Product_Price = 1.8M,
+                Product_Count = 26
             },
             new ProductItems
             {
                 Product = new Product("../../../Images/bounty.png", "Bounty"),
                 Product_Price = 1M,
                 Product_Count = 18
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/mars.png", "Mars"),
+                Product_Price = 1M,
+                Product_Count = 76
             },
             new ProductItems
             {
@@ -64,6 +76,36 @@ public class FakeData
             {
                 Product = new Product("../../../Images/hell.png", "Hell"),
                 Product_Price = 2M,
+                Product_Count = 19
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/full.png", "Full"),
+                Product_Price = 0.7M,
+                Product_Count = 85
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/winston.png", "Winston"),
+                Product_Price = 3.8M,
+                Product_Count = 29
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/sobranie.png", "Sobranie"),
+                Product_Price = 4.2M,
+                Product_Count = 39
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/wintchester.png", "Winchester"),
+                Product_Price = 2.8M,
+                Product_Count = 48
+            },
+            new ProductItems
+            {
+                Product = new Product("../../../Images/kent.png", "Kent"),
+                Product_Price = 3.8M,
                 Product_Count = 19
             },
         };

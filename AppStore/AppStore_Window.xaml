@@ -5,34 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppStore"
         mc:Ignorable="d"
-        Title="AppStore_Window" Height="450" Width="800">
-    <Grid>
+        Title="AppStore_Window" 
+        Height="500"
+        Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"   >
+    <Grid Background="SpringGreen">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.9*"/>
         </Grid.RowDefinitions>
-        
-        
-            <Label Grid.Row="0" Content="Store" 
+
+
+        <Label Grid.Row="0" Content="Store" 
                FontWeight="Bold"
                FontSize="48"
                FontStyle="Italic"
                FontFamily="Comic Sans Ms"
                VerticalContentAlignment="Center"
                HorizontalContentAlignment="Center">
-                <Label.Foreground>
+            <Label.Foreground>
+                <LinearGradientBrush>
+                    <GradientStop Color="#b92b27" Offset="0.25"/>
+                    <GradientStop Color="#1565C0" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto">
+            <StackPanel x:Name="bombaStackPanel" 
+                        >
+                <StackPanel.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#b92b27" Offset="0.25"/>
                         <GradientStop Color="#1565C0" Offset="0.9"/>
                     </LinearGradientBrush>
-                </Label.Foreground>
-            </Label>
-        
-            <ScrollViewer Grid.Row="1"
-                          HorizontalScrollBarVisibility="Auto">
-                    <StackPanel x:Name="bombaStackPanel" 
-                        />
-            </ScrollViewer>
+                </StackPanel.Background>
+            </StackPanel>
+        </ScrollViewer>
 
+        <Button Grid.Row="2" 
+                Click="Button_Click"
+                VerticalAlignment="Center"
+                Width="150"
+                Height="50"
+                BorderThickness="0"
+                Background="Transparent"
+                HorizontalAlignment="Center">
+            <Ellipse Width="150"
+                     Height="50">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Images/buy.png"
+                                Stretch="Fill"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Button>
     </Grid>
 </Window>

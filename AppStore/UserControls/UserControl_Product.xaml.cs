@@ -25,8 +25,8 @@ public partial class UserControl_Product : UserControl
         Products = new();
 
         ProductName.Content = product.Product.Product_Name;
-        Product_count.Content = product.Product_Count.ToString();
-        Product_price.Content = product.Product_Price.ToString();
+        Product_count.Text = product.Product_Count.ToString();
+        Product_price.Text = product.Product_Price.ToString();
         image.ImageSource = new BitmapImage(new Uri(product.Product.Product_Image_Url!, UriKind.Relative));
 
 
@@ -45,7 +45,7 @@ public partial class UserControl_Product : UserControl
 
         if (addstore.IsChecked.Value == true)
         {
-            Product_count.Content = (count - 1);
+            Product_count.Text = (count - 1).ToString();
             Product.Product_Count = count - 1;
             image_button.ImageSource = new BitmapImage(new Uri(ChangedImageurl!, UriKind.Relative));
             Products.Add(Product);
@@ -53,7 +53,7 @@ public partial class UserControl_Product : UserControl
 
         else
         {
-            Product_count.Content = count;
+            Product_count.Text = count.ToString();
             image_button.ImageSource = new BitmapImage(new Uri(SimpleUrl!, UriKind.Relative));
             Products.Remove(Product);
         }
