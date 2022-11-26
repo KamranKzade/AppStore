@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="AppStore_Window" 
         Height="500"
+        Icon="/Images/store2.png"
         Width="500"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"   >
@@ -51,6 +52,7 @@
                 VerticalAlignment="Center"
                 Width="150"
                 Height="50"
+                Cursor="Hand"
                 BorderThickness="0"
                 Background="Transparent"
                 HorizontalAlignment="Center">

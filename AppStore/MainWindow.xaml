@@ -51,6 +51,7 @@
             <Button HorizontalAlignment="Center" 
                     VerticalAlignment="Center"
                     Width="50"
+                    Cursor="Hand"
                     Click="Button_Click"
                     Background="Transparent"
                     BorderThickness="0"
