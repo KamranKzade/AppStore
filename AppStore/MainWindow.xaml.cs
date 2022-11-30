@@ -57,8 +57,8 @@ public partial class MainWindow : Window
 
         edit.ShowDialog();
 
-        product.Product_price.Text = edit.Product_price.Text.ToString();
-        product.Product_count.Text = edit.Product_count.Text.ToString();
+        product.Product_price.Text = edit.Product_price.Text!.ToString();
+        product.Product_count.Text = edit.Product_count.Text!.ToString();
         product.Product_count.IsEnabled = false;
         product.Product_count.IsEnabled = false;
 
@@ -67,7 +67,7 @@ public partial class MainWindow : Window
 
         foreach (var item in Products)
         {
-            if (item.Product.Product_Name == product.Product.Product.Product_Name)
+            if (item.Product!.Product_Name == product.Product.Product.Product_Name)
             {
                 item.Product_Price = decimal.Parse(product.Product_price.Text);
                 item.Product_Count = decimal.Parse(product.Product_count.Text);
